@@ -1,2 +1,5 @@
-<h1>{{ title }}</h1>
+<div class="users-header">
+  <h1>{{ title }}</h1>
+  <button>Add</button>
+</div>
 <app-dynamic-table [trackByKey]="'id'" [columns]="userColumns" [data]="userData"></app-dynamic-table>
