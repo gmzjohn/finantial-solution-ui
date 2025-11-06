@@ -21,12 +21,10 @@
   <main class="main-content">
     @switch (currentView) {
       @case ('home') {
-        <h1>Página de Inicio</h1>
-        <p>¡Bienvenido a tu panel de control!</p>
+        <app-home></app-home>
       }
       @case ('users') {
-        <h1>Gestión de Usuarios</h1>
-        <p>Aquí puedes administrar a los usuarios.</p>
+        <app-users></app-users>
       }
       @default {
         <h1>Página no encontrada</h1>
