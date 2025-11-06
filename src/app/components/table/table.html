@@ -1,0 +1,27 @@
+<div class="table-container">
+  <table class="dynamic-table">
+    <thead>
+      <tr>
+        @for (column of columns; track column.accessor) {
+        <th>{{ column.header }}</th>
+        }
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (row of data; track row[trackByKey]) {
+      <tr>
+        @for (column of columns; track column.accessor) {
+        <td>
+          {{ row[column.accessor] }}
+        </td>
+        }
+      </tr>
+      } @empty {
+      <tr>
+        <td [attr.colspan]="columns.length">No hay datos disponibles.</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
