@@ -5,12 +5,14 @@
       <ul>
         <li 
           [class.active]="currentView === 'home'"
+          routerLink="home"
           (click)="setCurrentView('home')"
         >
           Home
         </li>
         <li
           [class.active]="currentView === 'users'"
+          routerLink="users"
           (click)="setCurrentView('users')"
         >
           Users
@@ -18,17 +20,4 @@
       </ul>
     </nav>
   </aside>
-  <main class="main-content">
-    @switch (currentView) {
-      @case ('home') {
-        <app-home></app-home>
-      }
-      @case ('users') {
-        <app-users></app-users>
-      }
-      @default {
-        <h1>Página no encontrada</h1>
-      }
-    }
-  </main>
 </div>

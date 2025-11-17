@@ -1,14 +1,19 @@
 import { Routes } from '@angular/router';
-import { Dashboard } from './components/dashboard/dashboard';
+import { Home } from './view/home/home';
+import { Users } from './view/users/users';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
   {
-    path: 'dashboard',
-    component: Dashboard,
+    path: 'home',
+    component: Home,
+  },
+  {
+    path: 'users',
+    component: Users,
   },
 ];

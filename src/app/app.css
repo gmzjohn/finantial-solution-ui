@@ -1,0 +1,16 @@
+.main-view-container {
+  display: flex;
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #f4f6f9;
+}
+
+.main-content h1 {
+  color: #2c3e50;
+}
