@@ -1,5 +1,5 @@
 <div class="users-header">
   <h1>{{ title }}</h1>
-  <button>Add</button>
+  <button routerLink="/users/create">Add</button>
 </div>
 <app-dynamic-table [trackByKey]="'id'" [columns]="userColumns" [data]="userData"></app-dynamic-table>

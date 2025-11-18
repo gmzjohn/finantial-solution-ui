@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Table } from '../../components/table/table';
 import { Column } from '../../components/table/types';
+import { RouterLink } from "@angular/router";
 
 interface User {
   id: number;
@@ -13,7 +14,7 @@ interface User {
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [CommonModule, Table],
+  imports: [CommonModule, Table, RouterLink],
   templateUrl: './users.html',
   styleUrl: './users.css',
 })
