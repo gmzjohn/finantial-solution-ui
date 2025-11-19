@@ -3,18 +3,10 @@
     <nav class="sidebar-nav">
       <h2>Finantial Solution</h2>
       <ul>
-        <li 
-          [class.active]="currentView === 'home'"
-          routerLink="home"
-          (click)="setCurrentView('home')"
-        >
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="home">
           Home
         </li>
-        <li
-          [class.active]="currentView === 'users'"
-          routerLink="users"
-          (click)="setCurrentView('users')"
-        >
+        <li routerLinkActive="active" routerLink="users">
           Users
         </li>
       </ul>
