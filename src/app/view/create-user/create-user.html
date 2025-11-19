@@ -19,5 +19,13 @@
     }
   </div>
 
+  <div class="form-group">
+    <label for="role">Role</label>
+    <input id="role" type="text" formControlName="role" placeholder="Enter role">
+    @if (userForm.get('role')?.invalid && userForm.get('role')?.touched) {
+    <div class="error">Role is required.</div>
+    }
+  </div>
+
   <button type="submit" [disabled]="!userForm.valid">Submit</button>
 </form>
