@@ -5,6 +5,7 @@
         @for (column of columns; track column.accessor) {
         <th>{{ column.header }}</th>
         }
+        <th>Actions</th>
       </tr>
     </thead>
 
@@ -16,6 +17,10 @@
           {{ row[column.accessor] }}
         </td>
         }
+        <td class="actions-cell">
+          <button class="action-btn edit">Edit</button>
+          <button class="action-btn delete">Delete</button>
+        </td>
       </tr>
       } @empty {
       <tr>
