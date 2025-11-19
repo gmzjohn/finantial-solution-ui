@@ -18,13 +18,9 @@
         </td>
         }
         <td class="actions-cell">
-          <button class="action-btn edit">Edit</button>
-          <button class="action-btn delete">Delete</button>
+          <app-edit-button></app-edit-button>
+          <app-delete-button></app-delete-button>
         </td>
-      </tr>
-      } @empty {
-      <tr>
-        <td [attr.colspan]="columns.length">There are no users created.</td>
       </tr>
       }
     </tbody>

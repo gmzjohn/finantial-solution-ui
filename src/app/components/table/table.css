@@ -42,3 +42,8 @@
 .dynamic-table tbody tr:last-of-type {
   border-bottom: 2px solid #3498db;
 }
+
+.actions-cell {
+  display: flex;
+  gap: 8px;
+}
