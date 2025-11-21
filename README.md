@@ -1,27 +1,73 @@
-# FinantialSolutionUi
+# Financial Solution UI
 
-The purpose of this project is to be an online administrator to manage users 
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-## Development server
+A modern web interface for managing users and financial administrative tasks. This project serves as the frontend client for the Financial Solution system.
 
-To start a local development server, run:
+## 🚀 Features
+
+- **User Management**: Create, update, and manage user profiles.
+- **Responsive Design**: Optimized for various screen sizes.
+- **Real-time Updates**: Auto-reload during development.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Angular](https://angular.io/)
+- **Language**: TypeScript
+- **Containerization**: Podman / Docker
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js
+- npm or yarn
+- Angular CLI (`npm install -g @angular/cli`)
+
+### Development Server
+
+To start a local development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Once running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Create new component and view
+## 📦 Code Generation
 
-To generate a new component, run:
+Scaffold new parts of the application using the Angular CLI.
+
+**Generate a Component:**
 
 ```bash
-ng generate component component/component-name
+ng generate component components/component-name
 ```
 
-To generate a new view, run:
+**Generate a View:**
 
 ```bash
 ng generate component view/component-name
+```
+
+## 🐳 Containerization (Podman)
+
+You can run the application inside a container using Podman.
+
+**1. Build the image**
+
+VERSION: example 1.0.0
+
+```bash
+podman build -t finantial-solution-ui:{VERSION} .
+```
+
+**Run with interactive shell:**
+Replace `{VERSION}` with the desired version tag (e.g., `1.0.0`).
+
+```bash
+podman run -it --rm -p 4200:4200 -v .:/app:Z --userns=keep-id finantial-solution-ui:{VERSION} /bin/sh
 ```
